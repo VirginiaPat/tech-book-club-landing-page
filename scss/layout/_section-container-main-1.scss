@@ -1,0 +1,100 @@
+@use "../abstracts/variables";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+// CONTAINER MAIN-1 / JOIN THE ULTIMATE TECH BOOK CLUB :includes 1 container for the logo and 1 container for the rest
+.visually-hidden {
+  position: absolute;
+  width: functions.px-to-rem(1px);
+  height: functions.px-to-rem(1px);
+  padding: 0;
+  margin: functions.px-to-rem(-1px);
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.container-main__1 {
+  padding: functions.px-to-rem(24px) functions.px-to-rem(16px)
+    functions.px-to-rem(80px) functions.px-to-rem(16px);
+  background-color: variables.$color-neutral-100;
+
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(48px);
+
+  // CTA CONTAINER-------------------------------------------->
+  //the below includes: 1 container for all texts(title, description), button and reviews and the hero img
+  &-cta {
+    @include mixins.flex-column;
+    gap: functions.px-to-rem(64px);
+
+    // the below includes: 1 container for the title and description and 1 container for the button and review
+    &--texts-btn-reviews {
+      @include mixins.flex-column;
+      gap: functions.px-to-rem(32px);
+    }
+
+    &--texts {
+      @include mixins.flex-column;
+      gap: functions.px-to-rem(24px);
+
+      &-title {
+        @include mixins.text-preset-1--mobile;
+        background: linear-gradient(
+          129deg,
+          variables.$color-light-salmon-500 -10%,
+          variables.$color-neutral-900 48%
+        );
+        -webkit-background-clip: text; //Clip the background to the text
+        -webkit-text-fill-color: transparent; //Make the text itself transparent
+      }
+
+      &-description {
+        @include mixins.text-preset-5;
+        color: variables.$color-neutral-700;
+      }
+    }
+
+    // the below includes the button and the container for the reviews
+    &--btn-reviews {
+      @include mixins.flex-column;
+      gap: functions.px-to-rem(20px);
+    }
+
+    // the below includes the avatar img and the container with the stars and the text(number of subcriptions)
+    &--reviews {
+      @include mixins.flex-row;
+      gap: functions.px-to-rem(12px);
+      justify-content: center;
+      align-items: center;
+
+      &-avatar {
+        height: functions.px-to-rem(40px);
+      }
+
+      // the below includes: the stars container and the text(number of subcriptions)
+      &-star {
+        @include mixins.flex-column;
+        gap: functions.px-to-rem(4px);
+
+        // the below icludes all the 5 stars.
+        &-container {
+          font-size: 0;
+        }
+
+        &-img {
+          width: functions.px-to-rem(24px);
+          display: inline-block;
+        }
+      }
+
+      &-text {
+        @include mixins.text-preset-7;
+      }
+    }
+  }
+
+  &--hero-img {
+    border-radius: 4px;
+  }
+}

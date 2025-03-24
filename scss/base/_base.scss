@@ -1,0 +1,10 @@
+@use "../abstracts/variables";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+body {
+  background-color: variables.$color-neutral-0;
+
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(64px);
+}

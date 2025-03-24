@@ -1,0 +1,289 @@
+.btn-primary {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  letter-spacing: -0.0625rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: #fff5ef;
+  border: none;
+  outline: 2px solid #062630;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-primary-arr-down {
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover .btn-primary-arr-down {
+  transform: translateY(5px);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: none;
+  background: linear-gradient(90deg, #ffe2d1, #fff5ef);
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px #385159;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.container-main__1 {
+  padding: 1.5rem 1rem 5rem 1rem;
+  background-color: #faf5f3;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.container-main__1-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.container-main__1-cta--texts-btn-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container-main__1-cta--texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.container-main__1-cta--texts-title {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 3.875rem;
+  line-height: 1.2;
+  letter-spacing: -0.125rem;
+  font-size: 2.375rem;
+  background: linear-gradient(129deg, #fea36f -10%, #062630 48%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container-main__1-cta--texts-description {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: #385159;
+}
+.container-main__1-cta--btn-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.container-main__1-cta--reviews {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+.container-main__1-cta--reviews-avatar {
+  height: 2.5rem;
+}
+.container-main__1-cta--reviews-star {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.container-main__1-cta--reviews-star-container {
+  font-size: 0;
+}
+.container-main__1-cta--reviews-star-img {
+  width: 1.5rem;
+  display: inline-block;
+}
+.container-main__1-cta--reviews-text {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  letter-spacing: -0.0625rem;
+}
+.container-main__1--hero-img {
+  border-radius: 4px;
+}
+
+.container-main__2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 0 1rem;
+}
+
+.container-main__2--texts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.container-main__2--texts-container--heading {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 3.125rem;
+  line-height: 1.3;
+  letter-spacing: -0.125rem;
+  font-size: 2.125rem;
+  color: #062630;
+}
+
+.container-main__2--texts-container-features-list {
+  list-style: none;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: #385159;
+}
+
+.container-main__2--texts-container-features-list-item > img {
+  display: inline-block;
+  margin-right: 0.875rem;
+}
+
+.container-main__2--img {
+  border-radius: 11px;
+}
+
+/* CSS RESET---------------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/*# sourceMappingURL=style.css.map */

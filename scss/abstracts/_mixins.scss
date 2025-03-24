@@ -1,0 +1,108 @@
+@use "../abstracts/variables";
+@use "../abstracts/functions";
+
+// FLEX-BOX------------------------------------------------>
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+//TYPOGRAPHY---------------------------------------------->
+// Text-preset-1----------------------------->
+@mixin text-preset-1 {
+  font-family: variables.$font-martian-mono;
+  font-weight: variables.$font-weight-bold;
+  font-size: functions.px-to-rem(62px);
+  line-height: 1.2;
+  letter-spacing: functions.px-to-rem(-2px);
+}
+
+@mixin text-preset-1--mobile {
+  @include text-preset-1;
+  font-size: functions.px-to-rem(38px);
+}
+
+// Text-preset-2----------------------------->
+@mixin text-preset-2 {
+  font-family: variables.$font-martian-mono;
+  font-weight: variables.$font-weight-semibold;
+  font-size: functions.px-to-rem(50px);
+  line-height: 1.3;
+  letter-spacing: functions.px-to-rem(-2px);
+}
+
+@mixin text-preset-2--mobile {
+  @include text-preset-2;
+  font-size: functions.px-to-rem(34px);
+}
+
+// Text-preset-3----------------------------->
+@mixin text-preset-3 {
+  font-family: variables.$font-martian-mono;
+  font-weight: variables.$font-weight-semibold;
+  font-size: functions.px-to-rem(34px);
+  line-height: 1.3;
+  letter-spacing: functions.px-to-rem(-1px);
+}
+
+@mixin text-preset-3--mobile {
+  @include text-preset-3;
+  font-size: functions.px-to-rem(24px);
+  line-height: 1.1;
+}
+
+// Text-preset-4----------------------------->
+@mixin text-preset-4 {
+  font-family: variables.$font-martian-mono;
+  font-weight: variables.$font-weight-semibold;
+  font-size: functions.px-to-rem(24px);
+  line-height: 1.1;
+  letter-spacing: functions.px-to-rem(-1px);
+}
+
+@mixin text-preset-4--regular {
+  @include text-preset-4;
+  font-weight: variables.$font-weight-regular;
+}
+
+// Text-preset-5----------------------------->
+@mixin text-preset-5 {
+  font-family: variables.$font-inter;
+  font-weight: variables.$font-weight-regular;
+  font-size: functions.px-to-rem(20px);
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+
+@mixin text-preset-5--semibold {
+  @include text-preset-5;
+  font-weight: variables.$font-weight-semibold;
+}
+
+// Text-preset-6----------------------------->
+@mixin text-preset-6 {
+  font-family: variables.$font-martian-mono;
+  font-weight: variables.$font-weight-semibold;
+  font-size: functions.px-to-rem(18px);
+  line-height: 1.3;
+  letter-spacing: functions.px-to-rem(-1px);
+}
+
+@mixin text-preset-6--mobile {
+  @include text-preset-6;
+  font-size: functions.px-to-rem(16px);
+}
+
+// Text-preset-7----------------------------->
+@mixin text-preset-7 {
+  font-family: variables.$font-martian-mono;
+  font-weight: variables.$font-weight-regular;
+  font-size: functions.px-to-rem(14px);
+  line-height: 1.2;
+  letter-spacing: functions.px-to-rem(-1px);
+}
