@@ -1,0 +1,77 @@
+@use "../abstracts/variables";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+.membership {
+  padding: 0 functions.px-to-rem(16px);
+
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(24px);
+}
+
+.membership-title {
+  @include mixins.text-preset-2--mobile;
+  color: variables.$color-neutral-900;
+}
+
+.membership__option-starter {
+  padding: functions.px-to-rem(24px);
+  border: 1px solid variables.$color-neutral-200;
+  border-radius: 8px;
+
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(32px);
+}
+
+.membership__option-starter--info {
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(24px);
+}
+
+.membership__option-starter--info-title {
+  @include mixins.text-preset-2--mobile;
+  color: variables.$color-neutral-900;
+}
+
+.membership__option-starter--info-price {
+  @include mixins.text-preset-5;
+  color: variables.$color-neutral-700;
+
+  @include mixins.flex-row;
+  align-items: center;
+}
+
+.membership__option-starter--info-price span {
+  @include mixins.text-preset-3;
+  color: variables.$color-neutral-900;
+  padding-right: functions.px-to-rem(8px);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: variables.$color-neutral-200;
+}
+
+.membership__option-starter--info-list {
+  list-style: none;
+  @include mixins.text-preset-5;
+  color: variables.$color-neutral-700;
+}
+
+.membership__option-starter--info-list--item {
+  position: relative;
+  padding-left: functions.px-to-rem(36px);
+  padding-bottom: functions.px-to-rem(16px);
+}
+
+.membership__option-starter--info-list--item:last-child {
+  padding-bottom: 0rem;
+}
+
+.membership__option-starter--info-list--item::before {
+  content: url(../../assets/images/icon-check.svg);
+  position: absolute;
+  left: 0;
+  top: 0;
+}

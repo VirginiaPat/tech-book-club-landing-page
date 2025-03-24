@@ -7,7 +7,7 @@
   @include mixins.flex-column;
   gap: functions.px-to-rem(40px);
 
-  margin: 0 functions.px-to-rem(16px);
+  padding: 0 functions.px-to-rem(16px);
 
   &--texts-container {
     @include mixins.flex-column;
@@ -36,7 +36,9 @@
           content: url(../../assets/images/icon-check.svg);
           position: absolute;
           left: 0;
-          top: functions.px-to-rem(14px);
+          top: functions.px-to-rem(
+            14px
+          ); //i need to change it for screen size 545 to 0
         }
       }
     }

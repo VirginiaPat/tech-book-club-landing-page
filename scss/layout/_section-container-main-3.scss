@@ -5,7 +5,7 @@
 .container-main__3 {
   @include mixins.flex-column;
   gap: functions.px-to-rem(40px);
-  margin: 0 functions.px-to-rem(16px);
+  padding: 0 functions.px-to-rem(16px);
 
   &--texts {
     @include mixins.flex-column;

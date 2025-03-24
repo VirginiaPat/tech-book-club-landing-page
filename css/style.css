@@ -144,7 +144,7 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  margin: 0 1rem;
+  padding: 0 1rem;
 }
 .container-main__2--texts-container {
   display: flex;
@@ -191,7 +191,7 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  margin: 0 1rem;
+  padding: 0 1rem;
 }
 .container-main__3--texts {
   display: flex;
@@ -244,6 +244,7 @@
 .reading-journey {
   padding: 4rem 1rem;
   background-color: #faf5f3;
+  border-radius: 12px;
   background-image: url(../../assets/images/pattern-glow.svg);
   display: flex;
   flex-direction: column;
@@ -282,6 +283,103 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.membership {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.membership-title {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 3.125rem;
+  line-height: 1.3;
+  letter-spacing: -0.125rem;
+  font-size: 2.125rem;
+  color: #062630;
+}
+
+.membership__option-starter {
+  padding: 1.5rem;
+  border: 1px solid #e6e1df;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.membership__option-starter--info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.membership__option-starter--info-title {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 3.125rem;
+  line-height: 1.3;
+  letter-spacing: -0.125rem;
+  font-size: 2.125rem;
+  color: #062630;
+}
+
+.membership__option-starter--info-price {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: #385159;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.membership__option-starter--info-price span {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 2.125rem;
+  line-height: 1.3;
+  letter-spacing: -0.0625rem;
+  color: #062630;
+  padding-right: 0.5rem;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e6e1df;
+}
+
+.membership__option-starter--info-list {
+  list-style: none;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: #385159;
+}
+
+.membership__option-starter--info-list--item {
+  position: relative;
+  padding-left: 2.25rem;
+  padding-bottom: 1rem;
+}
+
+.membership__option-starter--info-list--item:last-child {
+  padding-bottom: 0rem;
+}
+
+.membership__option-starter--info-list--item::before {
+  content: url(../../assets/images/icon-check.svg);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* CSS RESET---------------------------------------------------- */
