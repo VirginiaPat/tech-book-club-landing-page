@@ -184,7 +184,63 @@
   top: 0.875rem;
 }
 .container-main__2--img {
-  border-radius: 11px;
+  border-radius: 10px;
+}
+
+.container-main__3 {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 0 1rem;
+}
+
+.container-main__3--texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.container-main__3--texts-title {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 3.125rem;
+  line-height: 1.3;
+  letter-spacing: -0.125rem;
+  font-size: 2.125rem;
+  color: #062630;
+}
+
+.container-main__3--texts-title span {
+  position: relative;
+  display: inline-block;
+}
+
+.container-main__3--texts-title span img {
+  position: absolute;
+  top: 3px;
+  left: -3px;
+}
+
+.container-main__3--texts-description {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: #385159;
+}
+
+.container-main__3--texts-description span {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+.container-main__3-img {
+  border-radius: 12px;
 }
 
 /* CSS RESET---------------------------------------------------- */

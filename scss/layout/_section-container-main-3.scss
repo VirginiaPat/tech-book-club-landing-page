@@ -1,0 +1,39 @@
+@use "../abstracts/variables";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+.container-main__3 {
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(40px);
+  margin: 0 functions.px-to-rem(16px);
+}
+.container-main__3--texts {
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(24px);
+}
+.container-main__3--texts-title {
+  @include mixins.text-preset-2--mobile;
+  color: variables.$color-neutral-900;
+}
+
+.container-main__3--texts-title span {
+  position: relative;
+  display: inline-block;
+}
+.container-main__3--texts-title span img {
+  position: absolute;
+  top: 3px;
+  left: -3px;
+}
+
+.container-main__3--texts-description {
+  @include mixins.text-preset-5;
+  color: variables.$color-neutral-700;
+}
+
+.container-main__3--texts-description span {
+  @include mixins.text-preset-5--semibold;
+}
+.container-main__3-img {
+  border-radius: 12px;
+}
