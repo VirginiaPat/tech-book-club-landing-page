@@ -2,35 +2,47 @@
 @use "../abstracts/functions";
 @use "../abstracts/mixins";
 
+// CONTAINER MAIN-2 / READ TOGETHER :includes container of header and list and the img
 .container-main__2 {
   @include mixins.flex-column;
   gap: functions.px-to-rem(40px);
 
   margin: 0 functions.px-to-rem(16px);
-}
 
-.container-main__2--texts-container {
-  @include mixins.flex-column;
-  gap: functions.px-to-rem(24px);
-}
-.container-main__2--texts-container--heading {
-  @include mixins.text-preset-2--mobile;
-  color: variables.$color-neutral-900;
-}
-.container-main__2--texts-container-features-list {
-  list-style: none;
-  @include mixins.text-preset-5;
-  color: variables.$color-neutral-700;
-}
+  &--texts-container {
+    @include mixins.flex-column;
+    gap: functions.px-to-rem(24px);
 
-.container-main__2--texts-container-features-list-item {
-}
+    &--heading {
+      @include mixins.text-preset-2--mobile;
+      color: variables.$color-neutral-900;
+    }
 
-.container-main__2--texts-container-features-list-item > img {
-  display: inline-block;
-  margin-right: functions.px-to-rem(14px);
-}
+    &--list {
+      list-style: none;
+      @include mixins.text-preset-5;
+      color: variables.$color-neutral-700;
 
-.container-main__2--img {
-  border-radius: 11px;
+      &-item {
+        position: relative;
+        padding-left: functions.px-to-rem(42px);
+        padding-bottom: functions.px-to-rem(16px);
+
+        &:last-child {
+          padding-bottom: 0rem;
+        }
+
+        &::before {
+          content: url(../../assets/images/icon-check.svg);
+          position: absolute;
+          left: 0;
+          top: functions.px-to-rem(14px);
+        }
+      }
+    }
+  }
+
+  &--img {
+    border-radius: 11px;
+  }
 }

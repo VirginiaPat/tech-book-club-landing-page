@@ -146,13 +146,11 @@
   gap: 2.5rem;
   margin: 0 1rem;
 }
-
 .container-main__2--texts-container {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
 .container-main__2--texts-container--heading {
   font-family: "Martian Mono", Arial, sans-serif;
   font-weight: 600;
@@ -162,8 +160,7 @@
   font-size: 2.125rem;
   color: #062630;
 }
-
-.container-main__2--texts-container-features-list {
+.container-main__2--texts-container--list {
   list-style: none;
   font-family: "Inter", Arial, sans-serif;
   font-weight: 400;
@@ -172,12 +169,20 @@
   letter-spacing: -0.5px;
   color: #385159;
 }
-
-.container-main__2--texts-container-features-list-item > img {
-  display: inline-block;
-  margin-right: 0.875rem;
+.container-main__2--texts-container--list-item {
+  position: relative;
+  padding-left: 2.625rem;
+  padding-bottom: 1rem;
 }
-
+.container-main__2--texts-container--list-item:last-child {
+  padding-bottom: 0rem;
+}
+.container-main__2--texts-container--list-item::before {
+  content: url(../../assets/images/icon-check.svg);
+  position: absolute;
+  left: 0;
+  top: 0.875rem;
+}
 .container-main__2--img {
   border-radius: 11px;
 }
