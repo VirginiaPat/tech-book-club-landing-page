@@ -1,0 +1,44 @@
+@use "../abstracts/variables";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+.reading-journey-section {
+  padding: 0 functions.px-to-rem(16px);
+  color: variables.$color-neutral-900;
+}
+
+.reading-journey {
+  padding: functions.px-to-rem(64px) functions.px-to-rem(16px);
+  background-color: variables.$color-neutral-100;
+
+  background-image: url(../../assets/images/pattern-glow.svg);
+
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(32px);
+
+  &--title {
+    @include mixins.text-preset-2--mobile;
+  }
+
+  &--step-container {
+    @include mixins.text-preset-6--mobile;
+    @include mixins.flex-column;
+    gap: functions.px-to-rem(32px);
+
+    &--numbers-texts {
+      @include mixins.flex-column;
+      gap: functions.px-to-rem(20px);
+
+      &--number {
+        height: functions.px-to-rem(32px);
+        width: functions.px-to-rem(32px);
+        border: 2px solid variables.$color-neutral-900;
+        border-radius: 4px;
+
+        @include mixins.flex-row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
