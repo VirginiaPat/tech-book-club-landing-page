@@ -13,6 +13,7 @@
   border-radius: 12px;
 
   background-image: url(../../assets/images/pattern-glow.svg);
+  background-repeat: no-repeat;
 
   @include mixins.flex-column;
   gap: functions.px-to-rem(32px);
