@@ -1,0 +1,32 @@
+@use "../abstracts/variables";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+.testimonials {
+  padding: 0 functions.px-to-rem(16px);
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(32px);
+}
+
+.testimonials__ratings {
+  @include mixins.flex-row;
+  gap: functions.px-to-rem(6px);
+}
+
+.restimonilas__ratings-star {
+}
+
+.testimonials__content {
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(32px);
+}
+
+.testimonials__content-comment {
+  @include mixins.text-preset-3--mobile;
+  color: variables.$color-neutral-900;
+}
+
+.testimonials__content-person {
+  @include mixins.text-preset-5;
+  color: variables.$color-neutral-700;
+}
