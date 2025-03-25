@@ -7,4 +7,9 @@ body {
 
   @include mixins.flex-column;
   gap: functions.px-to-rem(64px);
+
+  // Tablet (768px :48em )
+  @media (min-width: 48em) {
+    gap: functions.px-to-rem(80px);
+  }
 }

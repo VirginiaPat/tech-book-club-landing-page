@@ -19,29 +19,29 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s;
-}
 
-.btn-primary-arr--down {
-  transition: transform 0.3s ease-in-out;
-}
+  &-arr--down {
+    transition: transform 0.3s ease-in-out;
+  }
 
-.btn-primary:hover .btn-primary-arr--down {
-  transform: translateY(5px);
-}
+  &:hover .btn-primary-arr--down {
+    transform: translateY(5px);
+  }
 
-.btn-primary:hover,
-.btn-primary:active {
-  background-color: none;
-  background: linear-gradient(
-    90deg,
-    variables.$color-light-salmon-100,
-    variables.$color-light-salmon-50
-  );
-}
+  &:hover,
+  :active {
+    background-color: none;
+    background: linear-gradient(
+      90deg,
+      variables.$color-light-salmon-100,
+      variables.$color-light-salmon-50
+    );
+  }
 
-.btn-primary:focus {
-  box-shadow: 0 0 0 3px variables.$color-neutral-0,
-    0 0 0 5px variables.$color-neutral-700;
+  &:focus {
+    box-shadow: 0 0 0 3px variables.$color-neutral-0,
+      0 0 0 5px variables.$color-neutral-700;
+  }
 }
 
 // ALTERNATE-----------------------
@@ -62,27 +62,27 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s;
-}
 
-.btn-alternate-arr--up {
-  transition: transform 0.3s ease-in-out;
-}
+  &-arr--up {
+    transition: transform 0.3s ease-in-out;
+  }
 
-.btn-alternate:hover .btn-alternate-arr--up {
-  transform: translateY(-5px);
-}
+  &:hover .btn-alternate-arr--up {
+    transform: translateY(-5px);
+  }
 
-.btn-alternate:hover,
-.btn-alternate:active {
-  background-color: none;
-  background: linear-gradient(
-    270deg,
-    variables.$color-neutral-900,
-    variables.$color-neutral-700
-  );
-}
+  &:hover,
+  :active {
+    background-color: none;
+    background: linear-gradient(
+      270deg,
+      variables.$color-neutral-900,
+      variables.$color-neutral-700
+    );
+  }
 
-.btn-alternate:focus {
-  box-shadow: 0 0 0 3px variables.$color-neutral-900,
-    0 0 0 5px variables.$color-neutral-200;
+  &:focus {
+    box-shadow: 0 0 0 3px variables.$color-neutral-900,
+      0 0 0 5px variables.$color-neutral-200;
+  }
 }

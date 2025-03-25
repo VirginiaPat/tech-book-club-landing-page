@@ -19,21 +19,17 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-
 .btn-primary-arr--down {
   transition: transform 0.3s ease-in-out;
 }
-
 .btn-primary:hover .btn-primary-arr--down {
   transform: translateY(5px);
 }
-
 .btn-primary:hover,
-.btn-primary:active {
+.btn-primary :active {
   background-color: none;
   background: linear-gradient(90deg, #ffe2d1, #fff5ef);
 }
-
 .btn-primary:focus {
   box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px #385159;
 }
@@ -60,21 +56,17 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-
 .btn-alternate-arr--up {
   transition: transform 0.3s ease-in-out;
 }
-
 .btn-alternate:hover .btn-alternate-arr--up {
   transform: translateY(-5px);
 }
-
 .btn-alternate:hover,
-.btn-alternate:active {
+.btn-alternate :active {
   background-color: none;
   background: linear-gradient(270deg, #062630, #385159);
 }
-
 .btn-alternate:focus {
   box-shadow: 0 0 0 3px #062630, 0 0 0 5px #e6e1df;
 }
@@ -639,6 +631,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+}
+@media (min-width: 48em) {
+  body {
+    gap: 5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
