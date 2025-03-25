@@ -20,11 +20,11 @@
   transition: all 0.3s;
 }
 
-.btn-primary-arr-down {
+.btn-primary-arr--down {
   transition: transform 0.3s ease-in-out;
 }
 
-.btn-primary:hover .btn-primary-arr-down {
+.btn-primary:hover .btn-primary-arr--down {
   transform: translateY(5px);
 }
 
@@ -36,6 +36,47 @@
 
 .btn-primary:focus {
   box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px #385159;
+}
+
+.btn-alternate {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  letter-spacing: -0.0625rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: #062630;
+  color: #ffffff;
+  border: none;
+  outline: 2px solid #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-alternate-arr--up {
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-alternate:hover .btn-alternate-arr--up {
+  transform: translateY(-5px);
+}
+
+.btn-alternate:hover,
+.btn-alternate:active {
+  background-color: none;
+  background: linear-gradient(270deg, #062630, #385159);
+}
+
+.btn-alternate:focus {
+  box-shadow: 0 0 0 3px #062630, 0 0 0 5px #e6e1df;
 }
 
 .main-container {
@@ -383,19 +424,19 @@ hr {
   flex-direction: column;
   gap: 2rem;
 }
-
 .testimonials__ratings {
   display: flex;
   flex-direction: row;
   gap: 0.375rem;
 }
-
+.testimonials__ratings-star {
+  width: 1.75rem;
+}
 .testimonials__content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-
 .testimonials__content-comment {
   font-family: "Martian Mono", Arial, sans-serif;
   font-weight: 600;
@@ -406,14 +447,94 @@ hr {
   line-height: 1.1;
   color: #062630;
 }
-
-.testimonials__content-person {
+.testimonials__content-comment-person {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.4;
   letter-spacing: -0.5px;
   color: #385159;
+}
+
+.footer {
+  padding: 3rem 1rem 0 1rem;
+  border-radius: 16px 16px 0 0;
+  background-color: #062630;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.footer__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer__main-heading {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 3.125rem;
+  line-height: 1.3;
+  letter-spacing: -0.125rem;
+  font-size: 2.125rem;
+  color: #faf5f3;
+  text-align: center;
+}
+.footer__main-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer__main-cta--reviews {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer__main-cta--reviews-avatar {
+  height: 2.5rem;
+}
+.footer__main-cta--reviews-star {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.footer__main-cta--reviews-star-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.125rem;
+}
+.footer__main-cta--reviews-star-img {
+  width: 1.75rem;
+}
+.footer__main-cta--reviews-text {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  letter-spacing: -0.0625rem;
+  color: #ffffff;
+}
+.footer__content {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #385159;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.footer__content-text {
+  font-family: "Martian Mono", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  letter-spacing: -0.0625rem;
+  color: #ffffff;
+}
+.footer__content-social {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
 }
 
 /* CSS RESET---------------------------------------------------- */

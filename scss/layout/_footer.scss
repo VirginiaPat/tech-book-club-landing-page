@@ -1,0 +1,79 @@
+@use "../abstracts/variables";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+.footer {
+  padding: functions.px-to-rem(48px) functions.px-to-rem(16px) 0
+    functions.px-to-rem(16px);
+  border-radius: 16px 16px 0 0;
+  background-color: variables.$color-neutral-900;
+
+  @include mixins.flex-column;
+  gap: functions.px-to-rem(64px);
+
+  &__main {
+    @include mixins.flex-column;
+    gap: functions.px-to-rem(40px);
+
+    &-heading {
+      @include mixins.text-preset-2--mobile;
+      color: variables.$color-neutral-100;
+      text-align: center;
+    }
+
+    &-cta {
+      @include mixins.flex-column;
+      gap: functions.px-to-rem(24px);
+
+      &--reviews {
+        @include mixins.flex-row;
+        gap: functions.px-to-rem(12px);
+        justify-content: center;
+        align-items: center;
+
+        &-avatar {
+          height: functions.px-to-rem(40px);
+        }
+
+        &-star {
+          @include mixins.flex-column;
+          gap: functions.px-to-rem(4px);
+
+          &-container {
+            @include mixins.flex-row;
+            gap: functions.px-to-rem(2px);
+          }
+
+          &-img {
+            width: functions.px-to-rem(28px);
+          }
+        }
+
+        &-text {
+          @include mixins.text-preset-7;
+          color: variables.$color-neutral-0;
+        }
+      }
+    }
+  }
+
+  &__content {
+    padding: functions.px-to-rem(24px) functions.px-to-rem(32px);
+
+    border-top: 1px solid variables.$color-neutral-700;
+
+    @include mixins.flex-column;
+    gap: functions.px-to-rem(16px);
+    align-items: center;
+
+    &-text {
+      @include mixins.text-preset-7;
+      color: variables.$color-neutral-0;
+    }
+
+    &-social {
+      @include mixins.flex-row;
+      gap: functions.px-to-rem(24px);
+    }
+  }
+}

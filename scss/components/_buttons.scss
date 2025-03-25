@@ -2,6 +2,7 @@
 @use "../abstracts/functions";
 @use "../abstracts/mixins";
 
+// PRIMARY BUTTON------------------------
 .btn-primary {
   @include mixins.text-preset-6--mobile;
   text-transform: uppercase;
@@ -20,11 +21,11 @@
   transition: all 0.3s;
 }
 
-.btn-primary-arr-down {
+.btn-primary-arr--down {
   transition: transform 0.3s ease-in-out;
 }
 
-.btn-primary:hover .btn-primary-arr-down {
+.btn-primary:hover .btn-primary-arr--down {
   transform: translateY(5px);
 }
 
@@ -41,4 +42,47 @@
 .btn-primary:focus {
   box-shadow: 0 0 0 3px variables.$color-neutral-0,
     0 0 0 5px variables.$color-neutral-700;
+}
+
+// ALTERNATE-----------------------
+.btn-alternate {
+  @include mixins.text-preset-6--mobile;
+  text-transform: uppercase;
+
+  @include mixins.flex-row;
+  gap: functions.px-to-rem(16px);
+  justify-content: center;
+  align-items: center;
+
+  padding: functions.px-to-rem(20px) functions.px-to-rem(24px);
+  background: variables.$color-neutral-900;
+  color: variables.$color-neutral-0;
+  border: none;
+  outline: 2px solid variables.$color-neutral-0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-alternate-arr--up {
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-alternate:hover .btn-alternate-arr--up {
+  transform: translateY(-5px);
+}
+
+.btn-alternate:hover,
+.btn-alternate:active {
+  background-color: none;
+  background: linear-gradient(
+    270deg,
+    variables.$color-neutral-900,
+    variables.$color-neutral-700
+  );
+}
+
+.btn-alternate:focus {
+  box-shadow: 0 0 0 3px variables.$color-neutral-900,
+    0 0 0 5px variables.$color-neutral-200;
 }
