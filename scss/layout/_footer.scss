@@ -11,6 +11,12 @@
   @include mixins.flex-column;
   gap: functions.px-to-rem(64px);
 
+  // Tablet (768px :48em )
+  @media (min-width: 48em) {
+    padding: functions.px-to-rem(64px) functions.px-to-rem(32px) 0
+      functions.px-to-rem(32px);
+  }
+
   &__main {
     @include mixins.flex-column;
     gap: functions.px-to-rem(40px);
@@ -19,6 +25,11 @@
       @include mixins.text-preset-2--mobile;
       color: variables.$color-neutral-100;
       text-align: center;
+
+      // Tablet (768px :48em )
+      @media (min-width: 48em) {
+        @include mixins.text-preset-2;
+      }
     }
 
     &-cta {
@@ -58,13 +69,19 @@
   }
 
   &__content {
-    padding: functions.px-to-rem(24px) functions.px-to-rem(32px);
+    padding: functions.px-to-rem(24px) 0;
 
     border-top: 1px solid variables.$color-neutral-700;
 
     @include mixins.flex-column;
     gap: functions.px-to-rem(16px);
     align-items: center;
+
+    // Tablet (768px :48em )
+    @media (min-width: 48em) {
+      @include mixins.flex-row;
+      justify-content: space-between;
+    }
 
     &-text {
       @include mixins.text-preset-7;

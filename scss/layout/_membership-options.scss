@@ -8,9 +8,28 @@
   @include mixins.flex-column;
   gap: functions.px-to-rem(24px);
 
+  // Tablet (768px :48em )
+  @media (min-width: 48em) {
+    padding: 0 functions.px-to-rem(32px);
+    gap: functions.px-to-rem(40px);
+  }
+
   &-title {
     @include mixins.text-preset-2--mobile;
     color: variables.$color-neutral-900;
+
+    // Tablet (768px :48em )
+    @media (min-width: 48em) {
+      @include mixins.text-preset-2;
+    }
+  }
+
+  &__all-options {
+    // Tablet (768px :48em )
+    @media (min-width: 48em) {
+      @include mixins.text-preset-2;
+    }
+    @include mixins.grid-2rows-2cols;
   }
 
   &__option {
@@ -73,6 +92,15 @@
       background-color: variables.$color-neutral-100;
       background-image: url(../../assets/images/pattern-glow.svg);
       background-repeat: no-repeat;
+      background-size: auto;
+      background-position: calc(100% + (0.5 * 1084px) + 24px)
+        calc(100% + (0.5 * 1084px) + 202px);
+
+      // Tablet (768px :48em )
+      @media (min-width: 48em) {
+        background-position: calc(100% + (0.5 * 1084px) + 26px)
+          calc(100% + (0.5 * 1084px) + 186px);
+      }
     }
   }
 }

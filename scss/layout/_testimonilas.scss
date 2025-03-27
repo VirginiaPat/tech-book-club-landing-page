@@ -7,6 +7,11 @@
   @include mixins.flex-column;
   gap: functions.px-to-rem(32px);
 
+  // Tablet (768px :48em )
+  @media (min-width: 48em) {
+    padding: 0 functions.px-to-rem(32px);
+  }
+
   &__ratings {
     @include mixins.flex-row;
     gap: functions.px-to-rem(6px);
@@ -27,6 +32,10 @@
       &-person {
         @include mixins.text-preset-5;
         color: variables.$color-neutral-700;
+      }
+
+      @media (min-width: 48em) {
+        @include mixins.text-preset-3;
       }
     }
   }

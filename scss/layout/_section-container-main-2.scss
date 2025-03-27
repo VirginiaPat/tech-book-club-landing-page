@@ -9,13 +9,28 @@
 
   padding: 0 functions.px-to-rem(16px);
 
+  // Tablet (768px :48em )
+  @media (min-width: 48em) {
+    padding: 0 functions.px-to-rem(32px);
+  }
+
   &--texts-container {
     @include mixins.flex-column;
     gap: functions.px-to-rem(24px);
 
+    // Tablet (768px :48em )
+    @media (min-width: 48em) {
+      gap: functions.px-to-rem(34px);
+    }
+
     &--heading {
       @include mixins.text-preset-2--mobile;
       color: variables.$color-neutral-900;
+
+      // Tablet (768px :48em )
+      @media (min-width: 48em) {
+        @include mixins.text-preset-2;
+      }
     }
 
     &--list {
@@ -28,6 +43,11 @@
         padding-left: functions.px-to-rem(42px);
         padding-bottom: functions.px-to-rem(16px);
 
+        // Tablet (768px :48em )
+        @media (min-width: 48em) {
+          padding-bottom: functions.px-to-rem(24px);
+        }
+
         &:last-child {
           padding-bottom: 0rem;
         }
@@ -36,9 +56,12 @@
           content: url(../../assets/images/icon-check.svg);
           position: absolute;
           left: 0;
-          top: functions.px-to-rem(
-            14px
-          ); //i need to change it for screen size 545 to 0
+          top: functions.px-to-rem(14px);
+
+          // Small devices (544px :34em )- it's where the design of check-boxes brakes
+          @media (min-width: 25.185em) {
+            top: 0;
+          }
         }
       }
     }
@@ -46,5 +69,9 @@
 
   &--img {
     border-radius: 10px;
+
+    @media (min-width: 48em) {
+      border-radius: 24px;
+    }
   }
 }

@@ -20,6 +20,11 @@
   cursor: pointer;
   transition: all 0.3s;
 
+  // Tablet (768px :48em )
+  @media (min-width: 48em) {
+    @include mixins.text-preset-6;
+  }
+
   &-arr--down {
     transition: transform 0.3s ease-in-out;
   }
@@ -62,6 +67,11 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s;
+
+  // Tablet (768px :48em )
+  @media (min-width: 48em) {
+    @include mixins.text-preset-6;
+  }
 
   &-arr--up {
     transition: transform 0.3s ease-in-out;

@@ -12,6 +12,14 @@
   flex-direction: row;
 }
 
+// GRID------------------------------------------------>
+@mixin grid-2rows-2cols {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: functions.px-to-rem(24px);
+}
+
 //TYPOGRAPHY---------------------------------------------->
 // Text-preset-1----------------------------->
 @mixin text-preset-1 {
