@@ -11,6 +11,13 @@
   @media (min-width: 48em) {
     padding: 0 functions.px-to-rem(32px);
   }
+  //Extra large devices 1440px:90em
+  @media (min-width: 90em) {
+    @include mixins.flex-row;
+    gap: functions.px-to-rem(80px);
+    align-items: center;
+    max-width: functions.px-to-rem(1170px);
+  }
 
   &--texts {
     @include mixins.flex-column;
@@ -53,6 +60,12 @@
     // Tablet (768px :48em )
     @media (min-width: 48em) {
       border-radius: 24px;
+    }
+
+    //Extra large devices 1440px:90em
+    @media (min-width: 90em) {
+      max-width: functions.px-to-rem(560px);
+      border-radius: 20px;
     }
   }
 }

@@ -12,6 +12,14 @@
     padding: 0 functions.px-to-rem(32px);
   }
 
+  //Extra large devices 1440px:90em
+  @media (min-width: 90em) {
+    max-width: functions.px-to-rem(970px);
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+
   &__ratings {
     @include mixins.flex-row;
     gap: functions.px-to-rem(6px);

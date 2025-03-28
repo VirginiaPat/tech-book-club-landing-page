@@ -37,11 +37,29 @@
     background-position: calc(100% + (0.5 * 684px)) calc(100% + (0.5 * 684px));
   }
 
+  //Extra large devices 1440px:90em
+  @media (min-width: 90em) {
+    padding: functions.px-to-rem(32px) functions.px-to-rem(135px)
+      functions.px-to-rem(80px) functions.px-to-rem(135px);
+
+    gap: functions.px-to-rem(80px);
+
+    background-position: calc(100% + (0.5 * 684px) + 130px)
+      calc(100% + (0.5 * 684px) - 102px);
+  }
+
   // CTA CONTAINER-------------------------------------------->
   //the below includes: 1 container for all texts(title, description), button and reviews and the hero img
   &-cta {
     @include mixins.flex-column;
     gap: functions.px-to-rem(64px);
+
+    //Extra large devices 1440px:90em
+    @media (min-width: 90em) {
+      @include mixins.flex-row;
+      align-items: center;
+      max-width: functions.px-to-rem(1174px);
+    }
 
     // the below includes: 1 container for the title and description and 1 container for the button and review
     &--texts-btn-reviews {
@@ -121,6 +139,11 @@
 
       @media (min-width: 48em) {
         border-radius: 10px;
+      }
+
+      //Extra large devices 1440px:90em
+      @media (min-width: 90em) {
+        max-width: functions.px-to-rem(540px);
       }
     }
   }

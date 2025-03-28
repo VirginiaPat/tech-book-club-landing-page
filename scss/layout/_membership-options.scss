@@ -14,6 +14,15 @@
     gap: functions.px-to-rem(40px);
   }
 
+  //Extra large devices 1440px:90em
+  @media (min-width: 90em) {
+    padding: 0;
+    gap: functions.px-to-rem(64px);
+
+    align-items: center;
+    justify-content: center;
+  }
+
   &-title {
     @include mixins.text-preset-2--mobile;
     color: variables.$color-neutral-900;
@@ -25,11 +34,19 @@
   }
 
   &__all-options {
+    @include mixins.flex-column;
+    gap: functions.px-to-rem(24px);
+
     // Tablet (768px :48em )
     @media (min-width: 48em) {
-      @include mixins.text-preset-2;
+      @include mixins.grid-2rows-2cols;
     }
-    @include mixins.grid-2rows-2cols;
+
+    //Extra large devices 1440px:90em
+    @media (min-width: 90em) {
+      @include mixins.flex-row;
+      gap: functions.px-to-rem(24px);
+    }
   }
 
   &__option {
@@ -39,6 +56,12 @@
 
     @include mixins.flex-column;
     gap: functions.px-to-rem(32px);
+
+    //Extra large devices 1440px:90em
+    @media (min-width: 90em) {
+      align-self: center;
+      min-width: functions.px-to-rem(286px);
+    }
 
     &--info {
       @include mixins.flex-column;
@@ -100,6 +123,12 @@
       @media (min-width: 48em) {
         background-position: calc(100% + (0.5 * 1084px) + 26px)
           calc(100% + (0.5 * 1084px) + 186px);
+      }
+
+      //Extra large devices 1440px:90em
+      @media (min-width: 90em) {
+        padding: functions.px-to-rem(40px) functions.px-to-rem(24px);
+        min-width: functions.px-to-rem(350px);
       }
     }
   }

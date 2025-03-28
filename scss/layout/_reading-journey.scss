@@ -10,6 +10,12 @@
   @media (min-width: 48em) {
     padding: 0 functions.px-to-rem(32px);
   }
+
+  //Extra large devices 1440px:90em
+  @media (min-width: 90em) {
+    padding: 0;
+    max-width: functions.px-to-rem(1170px);
+  }
 }
 
 .reading-journey {
@@ -35,12 +41,25 @@
     gap: functions.px-to-rem(48px);
   }
 
+  //Extra large devices 1440px:90em
+  @media (min-width: 90em) {
+    padding: functions.px-to-rem(80px) 0;
+    gap: functions.px-to-rem(64px);
+    align-items: center;
+  }
+
   &--title {
     @include mixins.text-preset-2--mobile;
 
     // Tablet (768px :48em )
     @media (min-width: 48em) {
       @include mixins.text-preset-2;
+    }
+
+    //Extra large devices 1440px:90em
+    @media (min-width: 90em) {
+      text-align: center;
+      max-width: functions.px-to-rem(512px);
     }
   }
 
@@ -55,6 +74,13 @@
       gap: functions.px-to-rem(40px);
     }
 
+    //Extra large devices 1440px:90em
+    @media (min-width: 90em) {
+      @include mixins.flex-row;
+      gap: functions.px-to-rem(48px);
+      padding: 0 functions.px-to-rem(60px);
+    }
+
     &--numbers-texts {
       @include mixins.flex-column;
       gap: functions.px-to-rem(20px);
@@ -62,6 +88,11 @@
       // Tablet (768px :48em )
       @media (min-width: 48em) {
         gap: functions.px-to-rem(24px);
+      }
+
+      //Extra large devices 1440px:90em
+      @media (min-width: 90em) {
+        position: relative;
       }
 
       &--number {
@@ -78,6 +109,16 @@
         @media (min-width: 48em) {
           height: functions.px-to-rem(40px);
           width: functions.px-to-rem(40px);
+        }
+
+        //Extra large devices 1440px:90em
+        @media (min-width: 90em) {
+          &::after {
+            content: url(../../assets/images/pattern-arrow.svg);
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
         }
       }
     }

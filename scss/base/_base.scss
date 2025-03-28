@@ -12,4 +12,9 @@ body {
   @media (min-width: 48em) {
     gap: functions.px-to-rem(80px);
   }
+
+  //Extra large devices 1440px:90em
+  @media (min-width: 90em) {
+    gap: functions.px-to-rem(120px);
+  }
 }

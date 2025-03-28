@@ -17,9 +17,21 @@
       functions.px-to-rem(32px);
   }
 
+  //Extra large devices 1440px:90em
+  @media (min-width: 90em) {
+    padding: functions.px-to-rem(80px) functions.px-to-rem(135px) 0
+      functions.px-to-rem(135px);
+  }
+
   &__main {
     @include mixins.flex-column;
     gap: functions.px-to-rem(40px);
+
+    //Extra large devices 1440px:90em
+    @media (min-width: 90em) {
+      align-items: center;
+      // max-width: functions.px-to-rem(753px);
+    }
 
     &-heading {
       @include mixins.text-preset-2--mobile;
@@ -29,6 +41,11 @@
       // Tablet (768px :48em )
       @media (min-width: 48em) {
         @include mixins.text-preset-2;
+      }
+
+      //Extra large devices 1440px:90em
+      @media (min-width: 90em) {
+        max-width: functions.px-to-rem(685px);
       }
     }
 

@@ -2,17 +2,7 @@
 @use "../abstracts/functions";
 @use "../abstracts/mixins";
 
-.main-container {
-  @include mixins.flex-column;
-  gap: functions.px-to-rem(64px);
-
-  // Tablet (768px :48em )
-  @media (min-width: 48em) {
-    gap: functions.px-to-rem(80px);
-  }
-}
-
-// container-main includes: container-main__1,container-main__2,container-main__3------------------------
+.main-container,
 .container-main {
   @include mixins.flex-column;
   gap: functions.px-to-rem(64px);
@@ -20,5 +10,11 @@
   // Tablet (768px :48em )
   @media (min-width: 48em) {
     gap: functions.px-to-rem(80px);
+  }
+
+  //Extra large devices 1440px:90em
+  @media (min-width: 90em) {
+    gap: functions.px-to-rem(120px);
+    align-items: center;
   }
 }
