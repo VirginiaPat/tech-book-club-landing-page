@@ -8,6 +8,11 @@
   border-radius: 16px 16px 0 0;
   background-color: variables.$color-neutral-900;
 
+  background-image: url(../../assets/images/pattern-dark-bg.svg);
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
+
   @include mixins.flex-column;
   gap: functions.px-to-rem(64px);
 

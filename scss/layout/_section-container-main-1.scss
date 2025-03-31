@@ -19,6 +19,10 @@
     functions.px-to-rem(80px) functions.px-to-rem(16px);
   background-color: variables.$color-neutral-100;
   width: 100vw;
+  background-image: url(../../assets/images/pattern-light-bg.svg);
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
 
   @include mixins.flex-column;
   gap: functions.px-to-rem(48px);
@@ -31,11 +35,13 @@
     gap: functions.px-to-rem(64px);
 
     // glow pattern
-    background-image: url(../../assets/images/pattern-glow.svg);
-    background-repeat: no-repeat;
-    background-size: auto;
+    background-image: url(../../assets/images/pattern-light-bg.svg),
+      url(../../assets/images/pattern-glow.svg);
+    background-repeat: repeat, no-repeat;
+    background-size: auto, auto;
 
-    background-position: calc(100% + (0.5 * 684px)) calc(100% + (0.5 * 684px));
+    background-position: top left,
+      calc(100% + (0.5 * 684px)) calc(100% + (0.5 * 684px));
   }
 
   //Extra large devices 1440px:90em
@@ -45,8 +51,8 @@
 
     gap: functions.px-to-rem(80px);
 
-    background-position: calc(100% + (0.5 * 684px) + 130px)
-      calc(100% + (0.5 * 684px) - 102px);
+    background-position: top left,
+      calc(100% + (0.5 * 684px) + 130px) calc(100% + (0.5 * 684px) - 102px);
   }
 
   // CTA CONTAINER-------------------------------------------->
@@ -147,7 +153,4 @@
       }
     }
   }
-}
-
-.logo-img {
 }

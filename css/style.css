@@ -124,6 +124,10 @@
   padding: 1.5rem 1rem 5rem 1rem;
   background-color: #faf5f3;
   width: 100vw;
+  background-image: url(../../assets/images/pattern-light-bg.svg);
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -132,17 +136,17 @@
   .container-main__1 {
     padding: 2rem 2rem 5rem 2rem;
     gap: 4rem;
-    background-image: url(../../assets/images/pattern-glow.svg);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: calc(100% + 342px) calc(100% + 342px);
+    background-image: url(../../assets/images/pattern-light-bg.svg), url(../../assets/images/pattern-glow.svg);
+    background-repeat: repeat, no-repeat;
+    background-size: auto, auto;
+    background-position: top left, calc(100% + 342px) calc(100% + 342px);
   }
 }
 @media (min-width: 90em) {
   .container-main__1 {
     padding: 2rem 8.4375rem 5rem 8.4375rem;
     gap: 5rem;
-    background-position: calc(100% + 342px + 130px) calc(100% + 342px - 102px);
+    background-position: top left, calc(100% + 342px + 130px) calc(100% + 342px - 102px);
   }
 }
 .container-main__1-cta {
@@ -445,10 +449,10 @@
   padding: 4rem 1rem;
   background-color: #faf5f3;
   border-radius: 12px;
-  background-image: url(../../assets/images/pattern-glow.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: calc(100% + 542px + 151px) calc(100% + 542px + 58px);
+  background-image: url(../../assets/images/pattern-light-bg.svg), url(../../assets/images/pattern-glow.svg);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, auto;
+  background-position: top left, calc(100% + 542px + 151px) calc(100% + 542px + 58px);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -776,6 +780,10 @@ hr {
   padding: 3rem 1rem 0 1rem;
   border-radius: 16px 16px 0 0;
   background-color: #062630;
+  background-image: url(../../assets/images/pattern-dark-bg.svg);
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
   display: flex;
   flex-direction: column;
   gap: 4rem;

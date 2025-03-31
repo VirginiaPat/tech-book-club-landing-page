@@ -23,11 +23,12 @@
   background-color: variables.$color-neutral-100;
   border-radius: 12px;
 
-  background-image: url(../../assets/images/pattern-glow.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: calc(100% + (0.5 * 1084px) + 151px)
-    calc(100% + (0.5 * 1084px) + 58px);
+  background-image: url(../../assets/images/pattern-light-bg.svg),
+    url(../../assets/images/pattern-glow.svg);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, auto;
+  background-position: top left,
+    calc(100% + (0.5 * 1084px) + 151px) calc(100% + (0.5 * 1084px) + 58px);
 
   @include mixins.flex-column;
   gap: functions.px-to-rem(32px);
