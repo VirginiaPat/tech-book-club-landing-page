@@ -7,6 +7,8 @@
   gap: functions.px-to-rem(40px);
   padding: 0 functions.px-to-rem(16px);
 
+  position: relative;
+
   // Tablet (768px :48em )
   @media (min-width: 48em) {
     padding: 0 functions.px-to-rem(32px);
@@ -51,6 +53,25 @@
       & span {
         @include mixins.text-preset-5--semibold;
       }
+    }
+  }
+
+  &-logos {
+    display: none;
+    position: absolute;
+
+    // Tablet (768px :48em )
+    @media (min-width: 48em) {
+      display: block;
+      width: functions.px-to-rem(120px);
+      bottom: functions.px-to-rem(50px);
+      right: functions.px-to-rem(82px);
+    }
+
+    //Extra large devices 1440px:90em
+    @media (min-width: 90em) {
+      bottom: functions.px-to-rem(31px);
+      left: functions.px-to-rem(530px);
     }
   }
 
