@@ -14,10 +14,36 @@
   border: 0;
 }
 
+.bg-container-1 {
+  background-color: variables.$color-neutral-100;
+  width: 100vw;
+
+  // Tablet (768px :48em )
+  @media (min-width: 48em) {
+    // glow pattern
+    background-image: url(../../assets/images/pattern-glow.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    background-position: calc(100% + (0.5 * 684px)) calc(100% + (0.5 * 684px));
+  }
+
+  //Extra large devices 1440px:90em
+  @media (min-width: 90em) {
+    background-position: calc(100% + (0.5 * 684px) + 130px)
+      calc(100% + (0.5 * 684px) - 102px);
+
+    align-items: center;
+  }
+}
+
+.logo-img {
+}
+
 .container-main__1 {
   padding: functions.px-to-rem(24px) functions.px-to-rem(16px)
     functions.px-to-rem(80px) functions.px-to-rem(16px);
-  background-color: variables.$color-neutral-100;
+  // background-color: variables.$color-neutral-100;
 
   @include mixins.flex-column;
   gap: functions.px-to-rem(48px);
@@ -30,11 +56,11 @@
     gap: functions.px-to-rem(64px);
 
     // glow pattern
-    background-image: url(../../assets/images/pattern-glow.svg);
-    background-repeat: no-repeat;
-    background-size: auto;
+    // background-image: url(../../assets/images/pattern-glow.svg);
+    // background-repeat: no-repeat;
+    // background-size: auto;
 
-    background-position: calc(100% + (0.5 * 684px)) calc(100% + (0.5 * 684px));
+    // background-position: calc(100% + (0.5 * 684px)) calc(100% + (0.5 * 684px));
   }
 
   //Extra large devices 1440px:90em
@@ -44,8 +70,8 @@
 
     gap: functions.px-to-rem(80px);
 
-    background-position: calc(100% + (0.5 * 684px) + 130px)
-      calc(100% + (0.5 * 684px) - 102px);
+    // background-position: calc(100% + (0.5 * 684px) + 130px)
+    //   calc(100% + (0.5 * 684px) - 102px);
   }
 
   // CTA CONTAINER-------------------------------------------->
