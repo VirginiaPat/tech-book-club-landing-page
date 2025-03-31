@@ -305,30 +305,30 @@
   line-height: 1.4;
   letter-spacing: -0.5px;
   color: #385159;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (min-width: 48em) {
+  .container-main__2--texts-container--list {
+    gap: 1.5rem;
+  }
 }
 .container-main__2--texts-container--list-item {
   position: relative;
   padding-left: 2.625rem;
-  padding-bottom: 1rem;
-}
-@media (min-width: 48em) {
-  .container-main__2--texts-container--list-item {
-    padding-bottom: 1.5rem;
-  }
-}
-.container-main__2--texts-container--list-item:last-child {
-  padding-bottom: 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
 }
 .container-main__2--texts-container--list-item::before {
   content: url(../../assets/images/icon-check.svg);
   position: absolute;
   left: 0;
-  top: 0.875rem;
-}
-@media (min-width: 25.185em) {
-  .container-main__2--texts-container--list-item::before {
-    top: 0;
-  }
+  display: flex;
+  flex-direction: row;
+  align-self: center;
 }
 .container-main__2--img {
   border-radius: 10px;

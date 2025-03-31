@@ -45,31 +45,30 @@
       list-style: none;
       @include mixins.text-preset-5;
       color: variables.$color-neutral-700;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: functions.px-to-rem(16px);
+
+      // Tablet (768px :48em )
+      @media (min-width: 48em) {
+        gap: functions.px-to-rem(24px);
+      }
 
       &-item {
         position: relative;
         padding-left: functions.px-to-rem(42px);
-        padding-bottom: functions.px-to-rem(16px);
-
-        // Tablet (768px :48em )
-        @media (min-width: 48em) {
-          padding-bottom: functions.px-to-rem(24px);
-        }
-
-        &:last-child {
-          padding-bottom: 0rem;
-        }
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
 
         &::before {
           content: url(../../assets/images/icon-check.svg);
           position: absolute;
           left: 0;
-          top: functions.px-to-rem(14px);
-
-          // Small devices (544px :34em )- it's where the design of check-boxes brakes
-          @media (min-width: 25.185em) {
-            top: 0;
-          }
+          display: flex;
+          flex-direction: row;
+          align-self: center;
         }
       }
     }
